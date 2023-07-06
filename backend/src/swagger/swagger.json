@@ -1,0 +1,101 @@
+ {
+  "definition": {
+    "openapi": "3.0.1",
+    "info": {
+      "title": "Inflight Dublin Ticket Interview API",
+      "description": "This is a sample server Ticket server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/). filters.",
+      "termsOfService": "http://swagger.io/terms/",
+      "contact": {
+        "email": "sunnepazzy123@gmail.com"
+      },
+      "license": {
+        "name": "Apache 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+      },
+      "version": "1.0.0"
+    },
+    "externalDocs": {
+      "description": "Find out more about Swagger",
+      "url": "http://swagger.io"
+    },
+    "servers": [
+      {
+        "url": "http://localhost:8000/api"
+      }
+    ],
+    "tags": [
+      {
+        "name": "ticket",
+        "description": "Operations about ticket",
+        "externalDocs": {
+          "description": "Find out more about our store",
+          "url": "http://swagger.io"
+        }
+      }
+    ],
+    "paths": {
+      "/ticket": {
+        "post": {
+          "tags": [
+            "Ticket"
+          ],
+          "summary": "Create ticket",
+          "description": "This create a new ticket.",
+          "operationId": "createTicket",
+          "requestBody": {
+            "description": "Created ticket object",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ticket"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "default": {
+              "description": "successful operation",
+              "content": {
+                "client": "sunday odibo",
+                "issue": "Bug Report"
+              }
+            }
+          },
+          "x-codegen-request-body-name": "body"
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Ticket": {
+          "type": "object",
+          "properties": {
+            "client": {
+              "type": "string"
+            },
+            "issue": {
+              "type": "string"
+            }
+          }
+        },
+        "ApiResponse": {
+          "type": "object",
+          "properties": {
+            "client": {
+              "type": "string"
+            },
+            "issue": {
+              "type": "string"
+            },
+            "deadline": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "apis": ["./routes/*.ts"]
+}
+
