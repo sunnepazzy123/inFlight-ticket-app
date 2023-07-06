@@ -82,7 +82,7 @@ suite environment for jest for backend
 
 ## Testing using Cypress
 ```
-suite environment for jest for backend
+suite environment for cypress for frontend
    -> cd frontend && npm start
    -> cd frontend && npx cypress open
 
