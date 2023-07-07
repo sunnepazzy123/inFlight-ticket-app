@@ -18,7 +18,7 @@ interface ISingleProp {
   index: number;
 }
 
-const Single = ({ ticket, index, switchStatusHandler }: ISingleProp) => {
+const SingleTicket = ({ ticket, index, switchStatusHandler }: ISingleProp) => {
   const dateFormat = moment(ticket.deadline[0]).format('YYYY-MM-DD');
 
   const color = getStatusColor(ticket);
@@ -68,4 +68,4 @@ const Single = ({ ticket, index, switchStatusHandler }: ISingleProp) => {
   );
 };
 
-export default Single;
+export default SingleTicket;

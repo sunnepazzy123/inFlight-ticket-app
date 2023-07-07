@@ -12,7 +12,6 @@ import {
   Title,
   Wrapper,
 } from '../../../styles';
-import Single from '../Single/Single';
 import moment from 'moment';
 import {
   createRandomTicketAction,
@@ -24,6 +23,7 @@ import ChevronRightOutlinedIcon from '@mui/icons-material/ChevronRightOutlined';
 import { faker } from '@faker-js/faker';
 import { Alert } from '@mui/material';
 import { RootState } from '../../../store';
+import SingleTicket from '../Single/Single';
 
 const CreateTicket = () => {
   const [open, setOpen] = useState(false);
@@ -89,7 +89,7 @@ const CreateTicket = () => {
         <SingleTicketWrapper>
           {tickets.map((ticket, index) => {
             return (
-              <Single
+              <SingleTicket
                 ticket={ticket}
                 key={index}
                 index={index + 1}

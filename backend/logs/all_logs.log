@@ -348,3 +348,5 @@
 [34minfo[39m: Server is listening at http://localhost:8000 {"service":"device","timestamp":"2023-07-07 09:05:55"}
 [34minfo[39m: MongoDB Connected: 127.0.0.1 {"service":"device","timestamp":"2023-07-07 09:07:00"}
 [34minfo[39m: Server is listening at http://localhost:8000 {"service":"device","timestamp":"2023-07-07 09:07:00"}
+[31merror[39m: Ticket not found {"service":"device","timestamp":"2023-07-07 09:11:09"}
+[31merror[39m: Cast to ObjectId failed for value "2" (type string) at path "_id" for model "tickets" {"service":"device","timestamp":"2023-07-07 09:11:16"}
