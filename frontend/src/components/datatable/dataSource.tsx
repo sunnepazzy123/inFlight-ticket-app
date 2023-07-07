@@ -7,7 +7,7 @@ const renderCell = (params: { row: { status: any } }) => {
 };
 
 export const ticketColumns = [
-  { field: 'id', headerName: 'ID', width: 70 },
+  { field: '_id', headerName: 'ID', width: 70 },
   {
     field: 'client',
     headerName: 'client',

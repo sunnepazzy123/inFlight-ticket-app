@@ -21,26 +21,35 @@ export interface ITicketDoc extends mongoose.Document {
   deadline: [string];
 }
 
-const ticketSchema = new Schema({
-  client: {
-    type: String,
-    required: true,
-    unique: true,
+const ticketSchema = new Schema(
+  {
+    client: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    issue: {
+      type: String,
+      required: true,
+    },
+    status: {
+      type: String,
+      required: true,
+      enum: StatusType,
+    },
+    deadline: {
+      type: [Date],
+      required: true,
+    },
   },
-  issue: {
-    type: String,
-    required: true,
+  {
+    toJSON: {
+      transform(docs, ret) {
+        delete ret.__v;
+      },
+    },
   },
-  status: {
-    type: String,
-    required: true,
-    enum: StatusType,
-  },
-  deadline: {
-    type: [Date],
-    required: true,
-  },
-});
+);
 
 const TicketModel = mongoose.model<ITicketDoc, ITicketModel>(
   'tickets',

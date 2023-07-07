@@ -24,7 +24,7 @@ const Datatable = ({ list, column, name, handlerOption }: IDatatableProps) => {
         return (
           <div className='cellAction'>
             <Link
-              to={`/${name}/${params.row.id}`}
+              to={`/${name}/${params.row._id}`}
               style={{ textDecoration: 'none' }}
             >
               <div className='viewButton'>View</div>
@@ -41,7 +41,7 @@ const Datatable = ({ list, column, name, handlerOption }: IDatatableProps) => {
               className='deleteButton'
               /* @ts-ignore */
               name='delete'
-              onClick={(e) => handler(e, params.row.id)}
+              onClick={(e) => handler(e, params.row._id)}
             >
               Delete
             </div>
@@ -63,7 +63,7 @@ const Datatable = ({ list, column, name, handlerOption }: IDatatableProps) => {
         className='datagrid'
         rows={list}
         columns={column?.concat(actionColumn)}
-        // pageSize={9}
+        getRowId={(row) => row._id}
       />
     </div>
   );

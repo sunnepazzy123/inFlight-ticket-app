@@ -1,4 +1,4 @@
-import React from 'react';
+import { ChangeEvent } from 'react';
 import {
   Paragraph,
   SwitchWrapper,
@@ -9,53 +9,25 @@ import {
 import { Radio, Switch } from '@mui/material';
 import { ITicket } from '../../../store/reducers/ticket.reducer';
 import moment from 'moment';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
+import { getStatusColor, getSwitchTheme } from '../../../theme';
 
 interface ISingleProp {
-  switchModeHandler: (arg: any) => void;
+  switchStatusHandler: (id: string) => void;
   ticket: ITicket;
   index: number;
 }
 
-const Single = ({ ticket, index, switchModeHandler }: ISingleProp) => {
+const Single = ({ ticket, index, switchStatusHandler }: ISingleProp) => {
   const dateFormat = moment(ticket.deadline[0]).format('YYYY-MM-DD');
-  const trackColor = ticket.status === 'closed' ? '#bebdbb' : '#01c755';
 
-  const getColor = (ticket: ITicket) => {
-    if (ticket.status === 'closed') return '#01c755';
-    if (ticket.status === 'open') {
-      const now = moment();
-      const future = moment(ticket.deadline[1]);
-      const greaterDate = moment.max(now, future);
-      if (greaterDate === now) return '#df3e1b';
-      if (greaterDate === future) return '#ffbc01';
-    }
-  };
+  const color = getStatusColor(ticket);
+  const switchTheme = getSwitchTheme(ticket);
 
-  const color = getColor(ticket);
-
-  const handleChange = (event: any) => {
-    event.preventDefault();
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const id = event.target.value;
-    switchModeHandler(id);
+    switchStatusHandler(id);
   };
-
-  const theme = createTheme({
-    components: {
-      MuiSwitch: {
-        styleOverrides: {
-          root: {
-            '& .MuiSwitch-track': {
-              backgroundColor: trackColor,
-            },
-            '& .Mui-checked + .MuiSwitch-track': {
-              backgroundColor: trackColor,
-            },
-          },
-        },
-      },
-    },
-  });
 
   return (
     <>
@@ -69,14 +41,14 @@ const Single = ({ ticket, index, switchModeHandler }: ISingleProp) => {
           </div>
 
           <SwitchWrapper>
-            <ThemeProvider theme={theme}>
+            <ThemeProvider theme={switchTheme.theme}>
               <Switch
                 size='small'
                 onChange={handleChange}
                 value={ticket._id}
                 checked={ticket.status === 'closed' || false}
                 style={{
-                  color: ticket.status === 'closed' ? '#bebdbb' : '#01c755',
+                  color: switchTheme.color,
                 }}
               />
             </ThemeProvider>

@@ -1,17 +1,18 @@
-import React from 'react';
 import Datatable from '../../../components/datatable/Datatable';
 import { ticketColumns } from '../../../components/datatable/dataSource';
 import { Paragraph } from '../../../styles';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../../store';
 
 const Tickets = () => {
-  const handlerOption = () => {
-    console.log('jsdkdjs');
-  };
+  const { tickets } = useSelector((state: RootState) => state.ticket);
+  const handlerOption = () => {};
+
   return (
     <>
       <Paragraph>All Tickets</Paragraph>
       <Datatable
-        list={[]}
+        list={tickets}
         column={ticketColumns}
         name='Tickets'
         handlerOption={handlerOption}

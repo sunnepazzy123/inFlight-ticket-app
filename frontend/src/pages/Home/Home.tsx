@@ -1,4 +1,3 @@
-import React from 'react';
 import './home.scss';
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';

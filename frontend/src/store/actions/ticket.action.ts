@@ -1,4 +1,4 @@
-import { Fn } from '..';
+import { AppDispatch } from '..';
 
 import {
   ITicket,
@@ -18,7 +18,7 @@ import {
 import { request } from '../../config/request';
 import { errorHandler } from '../../utils/errorHandler';
 
-export const getTicketsAction = async (dispatch: Fn) => {
+export const getTicketsAction = async (dispatch: AppDispatch) => {
   dispatch(getTicketsStart());
   try {
     const { data } = await request.get(`/api/tickets`);
@@ -29,7 +29,10 @@ export const getTicketsAction = async (dispatch: Fn) => {
   }
 };
 
-export const createTicketAction = async (dispatch: Fn, ticket: ITicket) => {
+export const createTicketAction = async (
+  dispatch: AppDispatch,
+  ticket: ITicket
+) => {
   dispatch(createTicketStart());
   try {
     const { data } = await request.post<ITicket>(`/api/tickets`, ticket);
@@ -42,7 +45,7 @@ export const createTicketAction = async (dispatch: Fn, ticket: ITicket) => {
 };
 
 export const createRandomTicketAction = async (
-  dispatch: Fn,
+  dispatch: AppDispatch,
   ticket: ITicket
 ) => {
   dispatch(createRandomTicketStart());
@@ -57,7 +60,7 @@ export const createRandomTicketAction = async (
 };
 
 export const updateStatusTicketAction = async (
-  dispatch: Fn,
+  dispatch: AppDispatch,
   id: string,
   ticket: Partial<ITicket>
 ) => {

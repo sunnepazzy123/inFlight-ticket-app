@@ -8,13 +8,11 @@ export const errorHandler = (
 ): Response => {
   logger.error(error.message);
   if (error.statusCode === 400 || error.statusCode != 404) {
-    return res
-      .status(400)
-      .json({
-        message: error.message,
-        statusCode: error.statusCode,
-        ok: false,
-      });
+    return res.status(400).json({
+      message: error.message,
+      statusCode: error.statusCode,
+      ok: false,
+    });
   }
 
   let { statusCode } = error;

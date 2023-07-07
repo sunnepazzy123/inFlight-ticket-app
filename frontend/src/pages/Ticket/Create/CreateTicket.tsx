@@ -1,13 +1,8 @@
-import React from 'react';
 import { useState } from 'react';
 import './create-ticket.scss';
 import BasicModalDialog from '../../../components/modal/modal';
 import { useSelector, useDispatch } from 'react-redux';
-import {
-  ITicket,
-  StatusType,
-  TicketState,
-} from '../../../store/reducers/ticket.reducer';
+import { ITicket, StatusType } from '../../../store/reducers/ticket.reducer';
 import {
   Button,
   Container,
@@ -29,15 +24,14 @@ import ChevronRightOutlinedIcon from '@mui/icons-material/ChevronRightOutlined';
 
 import { faker } from '@faker-js/faker';
 import { Alert } from '@mui/material';
+import { RootState } from '../../../store';
 
 const CreateTicket = () => {
   const [open, setOpen] = useState(false);
   const dispatch = useDispatch();
-  const { tickets, error } = useSelector(
-    (state: any) => state.ticket
-  ) as TicketState;
+  const { tickets, error } = useSelector((state: RootState) => state.ticket);
 
-  const switchModeHandler = (id: string) => {
+  const switchStatusHandler = (id: string) => {
     const ticket = tickets.find((ticket) => ticket._id === id);
 
     let payload: Partial<ITicket> = {};
@@ -100,7 +94,7 @@ const CreateTicket = () => {
                 ticket={ticket}
                 key={index}
                 index={index + 1}
-                switchModeHandler={switchModeHandler}
+                switchStatusHandler={switchStatusHandler}
               />
             );
           })}

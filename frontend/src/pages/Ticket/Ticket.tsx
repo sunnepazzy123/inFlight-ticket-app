@@ -1,4 +1,3 @@
-import React from 'react';
 import Tickets from './Tickets/Tickets';
 import CreateTicket from './Create/CreateTicket';
 
