@@ -20,8 +20,8 @@ Typescript
 
 ## Steps to Build an Image
 ```
- Step 1: cd backend && run docker build -t <NameOfImage> .
- Step 2: cd frontend && run docker build -t <NameOfImage> .
+ Step 1: cd backend && docker build -t backend-ticket-task .
+ Step 2: cd frontend && docker build -t frontend-ticket-task .
 ```
 
 
