@@ -305,3 +305,21 @@
 [34minfo[39m: MongoDB Connected: 127.0.0.1 {"service":"device","timestamp":"2023-07-07 08:08:12"}
 [34minfo[39m: Server is listening at http://localhost:8000 {"service":"device","timestamp":"2023-07-07 08:08:12"}
 [31merror[39m: client already exist {"service":"device","timestamp":"2023-07-07 08:21:36"}
+[34minfo[39m: MongoDB Connected: 127.0.0.1 {"service":"device","timestamp":"2023-07-07 08:30:19"}
+[34minfo[39m: Server is listening at http://localhost:8000 {"service":"device","timestamp":"2023-07-07 08:30:19"}
+[34minfo[39m: MongoDB Connected: 127.0.0.1 {"service":"device","timestamp":"2023-07-07 08:30:32"}
+[34minfo[39m: Server is listening at http://localhost:8000 {"service":"device","timestamp":"2023-07-07 08:30:32"}
+[34minfo[39m: MongoDB Connected: 127.0.0.1 {"service":"device","timestamp":"2023-07-07 08:31:34"}
+[34minfo[39m: Server is listening at http://localhost:8000 {"service":"device","timestamp":"2023-07-07 08:31:34"}
+[34minfo[39m: MongoDB Connected: 127.0.0.1 {"service":"device","timestamp":"2023-07-07 08:32:43"}
+[34minfo[39m: Server is listening at http://localhost:8000 {"service":"device","timestamp":"2023-07-07 08:32:43"}
+[34minfo[39m: MongoDB Connected: 127.0.0.1 {"service":"device","timestamp":"2023-07-07 08:32:59"}
+[34minfo[39m: Server is listening at http://localhost:8000 {"service":"device","timestamp":"2023-07-07 08:32:59"}
+[34minfo[39m: MongoDB Connected: 127.0.0.1 {"service":"device","timestamp":"2023-07-07 08:33:10"}
+[34minfo[39m: Server is listening at http://localhost:8000 {"service":"device","timestamp":"2023-07-07 08:33:10"}
+[34minfo[39m: MongoDB Connected: 127.0.0.1 {"service":"device","timestamp":"2023-07-07 08:33:16"}
+[34minfo[39m: Server is listening at http://localhost:8000 {"service":"device","timestamp":"2023-07-07 08:33:16"}
+[34minfo[39m: MongoDB Connected: 127.0.0.1 {"service":"device","timestamp":"2023-07-07 08:33:20"}
+[34minfo[39m: Server is listening at http://localhost:8000 {"service":"device","timestamp":"2023-07-07 08:33:20"}
+[34minfo[39m: MongoDB Connected: 127.0.0.1 {"service":"device","timestamp":"2023-07-07 08:35:10"}
+[34minfo[39m: Server is listening at http://localhost:8000 {"service":"device","timestamp":"2023-07-07 08:35:10"}

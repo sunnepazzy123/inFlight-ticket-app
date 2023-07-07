@@ -7,10 +7,13 @@ import { HttpError } from './error/http.error';
 import { app } from './app';
 
 export type IError = DatabaseError | HttpError;
-const PORT = process.env.PORT;
 
 const start = async () => {
+  const { PORT } = process.env;
+
   try {
+    if (!PORT)
+      throw new Error('Missing PORT env. Set it and restart the server');
     await connectDB();
 
     //Listening for a port
