@@ -28,7 +28,7 @@ const start = async () => {
 
 process.on('exit', async () => {
   await db.disconnect();
-  console.log('mongoose disconnected');
+  logger.error('db connection disconnected');
 });
 
 if (require.main === module) {

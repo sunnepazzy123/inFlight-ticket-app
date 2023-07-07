@@ -7,9 +7,9 @@ import { IError } from './server';
 import swaggerUI from 'swagger-ui-express';
 import swaggerJsDoc from 'swagger-jsdoc';
 import swaggerDocument from './swagger/swagger.json';
+import cors from 'cors';
 
 const apiSpecDoc = swaggerJsDoc(swaggerDocument);
-const cors = require('cors');
 
 // Creating the express app
 const app = express();

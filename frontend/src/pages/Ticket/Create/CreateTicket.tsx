@@ -21,7 +21,6 @@ import {
 } from '../../../store/actions/ticket.action';
 import EventOutlinedIcon from '@mui/icons-material/EventOutlined';
 import ChevronRightOutlinedIcon from '@mui/icons-material/ChevronRightOutlined';
-
 import { faker } from '@faker-js/faker';
 import { Alert } from '@mui/material';
 import { RootState } from '../../../store';

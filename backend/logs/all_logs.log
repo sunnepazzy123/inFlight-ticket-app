@@ -323,3 +323,28 @@
 [34minfo[39m: Server is listening at http://localhost:8000 {"service":"device","timestamp":"2023-07-07 08:33:20"}
 [34minfo[39m: MongoDB Connected: 127.0.0.1 {"service":"device","timestamp":"2023-07-07 08:35:10"}
 [34minfo[39m: Server is listening at http://localhost:8000 {"service":"device","timestamp":"2023-07-07 08:35:10"}
+[34minfo[39m: MongoDB Connected: 127.0.0.1 {"service":"device","timestamp":"2023-07-07 09:02:51"}
+[34minfo[39m: Server is listening at http://localhost:8000 {"service":"device","timestamp":"2023-07-07 09:02:51"}
+[31merror[39m: Cast to ObjectId failed for value "2" (type string) at path "_id" for model "tickets" {"service":"device","timestamp":"2023-07-07 09:03:23"}
+[34minfo[39m: MongoDB Connected: 127.0.0.1 {"service":"device","timestamp":"2023-07-07 09:04:04"}
+[34minfo[39m: Server is listening at http://localhost:8000 {"service":"device","timestamp":"2023-07-07 09:04:04"}
+[34minfo[39m: MongoDB Connected: 127.0.0.1 {"service":"device","timestamp":"2023-07-07 09:05:12"}
+[34minfo[39m: Server is listening at http://localhost:8000 {"service":"device","timestamp":"2023-07-07 09:05:12"}
+[34minfo[39m: MongoDB Connected: 127.0.0.1 {"service":"device","timestamp":"2023-07-07 09:05:21"}
+[34minfo[39m: Server is listening at http://localhost:8000 {"service":"device","timestamp":"2023-07-07 09:05:21"}
+[34minfo[39m: MongoDB Connected: 127.0.0.1 {"service":"device","timestamp":"2023-07-07 09:05:25"}
+[34minfo[39m: Server is listening at http://localhost:8000 {"service":"device","timestamp":"2023-07-07 09:05:25"}
+[34minfo[39m: MongoDB Connected: 127.0.0.1 {"service":"device","timestamp":"2023-07-07 09:05:30"}
+[34minfo[39m: Server is listening at http://localhost:8000 {"service":"device","timestamp":"2023-07-07 09:05:30"}
+[34minfo[39m: MongoDB Connected: 127.0.0.1 {"service":"device","timestamp":"2023-07-07 09:05:36"}
+[34minfo[39m: Server is listening at http://localhost:8000 {"service":"device","timestamp":"2023-07-07 09:05:36"}
+[34minfo[39m: MongoDB Connected: 127.0.0.1 {"service":"device","timestamp":"2023-07-07 09:05:39"}
+[34minfo[39m: Server is listening at http://localhost:8000 {"service":"device","timestamp":"2023-07-07 09:05:39"}
+[34minfo[39m: MongoDB Connected: 127.0.0.1 {"service":"device","timestamp":"2023-07-07 09:05:41"}
+[34minfo[39m: Server is listening at http://localhost:8000 {"service":"device","timestamp":"2023-07-07 09:05:41"}
+[34minfo[39m: MongoDB Connected: 127.0.0.1 {"service":"device","timestamp":"2023-07-07 09:05:46"}
+[34minfo[39m: Server is listening at http://localhost:8000 {"service":"device","timestamp":"2023-07-07 09:05:46"}
+[34minfo[39m: MongoDB Connected: 127.0.0.1 {"service":"device","timestamp":"2023-07-07 09:05:55"}
+[34minfo[39m: Server is listening at http://localhost:8000 {"service":"device","timestamp":"2023-07-07 09:05:55"}
+[34minfo[39m: MongoDB Connected: 127.0.0.1 {"service":"device","timestamp":"2023-07-07 09:07:00"}
+[34minfo[39m: Server is listening at http://localhost:8000 {"service":"device","timestamp":"2023-07-07 09:07:00"}
